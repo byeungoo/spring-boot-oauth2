@@ -48,6 +48,9 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         this.restOperations = restTemplate;
     }
 
+    /*
+     *  인증 완료, 후처리 회원 가입등을 여기서 진행하면 됨
+     */
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
         Assert.notNull(userRequest, "userRequest cannot be null");
